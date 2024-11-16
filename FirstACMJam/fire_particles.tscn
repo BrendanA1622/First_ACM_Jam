@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cocjvfqkhfne5"]
+
+[sub_resource type="Curve" id="Curve_87jna"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_cilln"]
+offsets = PackedFloat32Array(0, 0.286667, 0.686667)
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 20
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_87jna")
+color_ramp = SubResource("Gradient_cilln")
